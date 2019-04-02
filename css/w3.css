@@ -2005,6 +2005,10 @@ input[type=checkbox].w3-check:disabled + .w3-validate, input[type=radio].w3-radi
 
 /*-----------------------------------------------------------------------------*/
 
+.khach-border{
+	border: 2px solid green;
+}
+
 .khach-text h2 {
     /*color: white;*/
     font-size: 1.2em;
