@@ -1,0 +1,415 @@
+' ******************************************************************************
+' swxJRNL.swj - journal recorded on 05/22/19 by Karapetian
+' *****************************************************************************
+Dim swApp As Object
+
+Dim Part As Object
+Dim boolstatus As Boolean
+Dim longstatus As Long, longwarnings As Long
+
+Sub main()
+
+Set swApp = Application.SldWorks
+
+swApp.ActivateDoc2 "У-133_2 Сварная Часть - Лист1", False, longstatus
+Set Part = swApp.ActiveDoc
+Set Part = swApp.ActiveDoc
+Dim myModelView As Object
+Set myModelView = Part.ActiveView
+myModelView.FrameLeft = 0
+myModelView.FrameTop = 0
+Set myModelView = Part.ActiveView
+myModelView.FrameState = swWindowState_e.swWindowMaximized
+Set myModelView = Part.ActiveView
+myModelView.FrameState = swWindowState_e.swWindowMaximized
+boolstatus = Part.ActivateView("Чертежный вид12")
+boolstatus = Part.Extension.SelectByRay(0.10399132522162977, 0.25711907382683136, -4499.9293074656616, 0, 0, -1, 0.00062309551028721575, 2, False, 0, 0)
+Dim myNote As Object
+Dim BomBalloonParams As Object
+Set BomBalloonParams = Part.Extension.CreateBalloonOptions()
+BomBalloonParams.Style = 0
+BomBalloonParams.Size = 2
+BomBalloonParams.UpperTextContent = 0
+BomBalloonParams.UpperText = """"
+BomBalloonParams.ShowQuantity = False
+BomBalloonParams.QuantityPlacement = 1
+BomBalloonParams.QuantityDenotationText = "X"
+BomBalloonParams.QuantityOverride = False
+Set myNote = Part.Extension.InsertBomBalloon2(BomBalloonParams)
+boolstatus = Part.Extension.SelectByID2("Детальный элемент76@Чертежный вид12", "NOTE", 0.13679547120439789, 0.27031403760551287, 0, False, 0, Nothing, 0)
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByRay(0.04360083944046253, 0.24207037008089743, -4500.0287347545864, 0, 0, -1, 0.00091965627429417692, 2, False, 0, 0)
+boolstatus = Part.Extension.SelectByRay(0.044141813719459105, 0.23666062729093168, -4500.0287347545864, 0, 0, -1, 0.00091965627429417692, 2, False, 0, 0)
+Set BomBalloonParams = Part.Extension.CreateBalloonOptions()
+BomBalloonParams.Style = 0
+BomBalloonParams.Size = 2
+BomBalloonParams.UpperTextContent = 0
+BomBalloonParams.UpperText = """"
+BomBalloonParams.ShowQuantity = False
+BomBalloonParams.QuantityPlacement = 1
+BomBalloonParams.QuantityDenotationText = "X"
+BomBalloonParams.QuantityOverride = False
+Set myNote = Part.Extension.InsertBomBalloon2(BomBalloonParams)
+boolstatus = Part.Extension.SelectByRay(0.068485656274304973, 0.24585719003387341, -4500.0337347545856, 0, 0, -1, 0.00091965627429417692, 2, False, 0, 0)
+Set BomBalloonParams = Part.Extension.CreateBalloonOptions()
+BomBalloonParams.Style = 0
+BomBalloonParams.Size = 2
+BomBalloonParams.UpperTextContent = 0
+BomBalloonParams.UpperText = """"
+BomBalloonParams.ShowQuantity = False
+BomBalloonParams.QuantityPlacement = 1
+BomBalloonParams.QuantityDenotationText = "X"
+BomBalloonParams.QuantityOverride = False
+Set myNote = Part.Extension.InsertBomBalloon2(BomBalloonParams)
+boolstatus = Part.ActivateView("Чертежный вид14")
+boolstatus = Part.ActivateView("Чертежный вид12")
+boolstatus = Part.ActivateView("Чертежный вид11")
+boolstatus = Part.ActivateSheet("Лист1")
+boolstatus = Part.ActivateView("Чертежный вид11")
+boolstatus = Part.ActivateSheet("Лист1")
+boolstatus = Part.ActivateView("Чертежный вид15")
+boolstatus = Part.ActivateSheet("Лист1")
+boolstatus = Part.ActivateView("Чертежный вид15")
+boolstatus = Part.Extension.SelectByRay(0.37076411640234913, 0.072464378575951102, -4499.4700000000003, 0, 0, -1, 0.00085004132055580201, 2, False, 0, 0)
+Set BomBalloonParams = Part.Extension.CreateBalloonOptions()
+BomBalloonParams.Style = 0
+BomBalloonParams.Size = 2
+BomBalloonParams.UpperTextContent = 0
+BomBalloonParams.UpperText = """"
+BomBalloonParams.ShowQuantity = False
+BomBalloonParams.QuantityPlacement = 1
+BomBalloonParams.QuantityDenotationText = "X"
+BomBalloonParams.QuantityOverride = False
+Set myNote = Part.Extension.InsertBomBalloon2(BomBalloonParams)
+boolstatus = Part.Extension.SelectByID2("Детальный элемент79@Чертежный вид15", "NOTE", 0.3385125486518496, 0.086215047028126351, 0, False, 0, Nothing, 0)
+Part.ClearSelection2 True
+boolstatus = Part.ActivateSheet("Лист1")
+boolstatus = Part.ActivateView("Чертежный вид12")
+boolstatus = Part.Extension.SelectByID2("Детальный элемент78@Чертежный вид12", "NOTE", 0.063654188975004883, 0.26864856481582872, 0, False, 0, Nothing, 0)
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByID2("Детальный элемент77@Чертежный вид12", "NOTE", 0.028629805311134321, 0.25551442094187726, 0, False, 0, Nothing, 0)
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByID2("Детальный элемент78@Чертежный вид12", "NOTE", 0.060048737715488798, 0.26684583918607069, 0, False, 0, Nothing, 0)
+Part.ClearSelection2 True
+boolstatus = Part.ActivateSheet("Лист1")
+boolstatus = Part.Extension.SelectByID2("Детальный элемент70@Лист1", "ANNOTATIONTABLES", 0.35633515244578162, 0.27002449501783266, 0, False, 0, Nothing, 0)
+Part.ClearSelection2 True
+Dim myTable As Object
+Set myTable = Part.SelectionManager.GetSelectedObject5(1)
+myTable.Text(3,4) = "Кв. труба 60х60х3, 1060"
+boolstatus = Part.Extension.SelectByID2("Детальный элемент70@Лист1", "ANNOTATIONTABLES", 0.35733514015338669, 0.26532455279208883, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("Детальный элемент70@Лист1", "ANNOTATIONTABLES", 0.35733514015338669, 0.26532455279208883, 0, False, 0, Nothing, 0)
+Part.ClearSelection2 True
+Set myTable = Part.SelectionManager.GetSelectedObject5(1)
+myTable.Text(4,4) = "Кв. труба 60х60х3, 1660"
+boolstatus = Part.ActivateView("Чертежный вид15")
+boolstatus = Part.Extension.SelectByID2("Детальный элемент79@Чертежный вид15", "NOTE", 0.33856161973006582, 0.086415228420480522, 0, False, 0, Nothing, 0)
+Part.ClearSelection2 True
+
+' Zoom To Fit
+Part.ViewZoomtofit2
+
+' Zoom To Fit
+Part.ViewZoomtofit2
+
+' Zoom To Fit
+Part.ViewZoomtofit2
+
+' Save
+Dim swErrors As Long
+Dim swWarnings As Long
+boolstatus = Part.Save3(1, swErrors, swWarnings)
+boolstatus = Part.ActivateSheet("Лист1")
+
+' Save
+boolstatus = Part.Save3(1, swErrors, swWarnings)
+boolstatus = Part.ActivateView("Чертежный вид14")
+boolstatus = Part.Extension.SelectByID2("Чертежный вид14", "DRAWINGVIEW", 0.37283042027505842, 0.25026547685493428, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByRay(0.36015434249681583, 0.19417383265478685, -4500.0892337575915, 0, 0, -1, 0.0010774666111506206, 1, False, 0, 0)
+boolstatus = Part.Extension.SelectByRay(0.35571771527443091, 0.18054704904317737, -4499.9001914744222, 0, 0, -1, 0.0010774666111506206, 1, False, 0, 0)
+Part.ClearSelection2 True
+boolstatus = Part.ActivateSheet("Лист1")
+boolstatus = Part.ActivateView("Чертежный вид14")
+boolstatus = Part.Extension.SelectByID2("Чертежный вид14", "DRAWINGVIEW", 0.39910239751945231, 0.16841655688875767, 0, False, 0, Nothing, 0)
+Part.ClearSelection2 True
+boolstatus = Part.ActivateSheet("Лист1")
+boolstatus = Part.ActivateView("Чертежный вид14")
+boolstatus = Part.Extension.SelectByID2("Чертежный вид14", "DRAWINGVIEW", 0.40468656987237217, 0.15897546390496739, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByRay(0.37056333651044715, 0.18883329306522906, -4499.9086760239088, 0, 0, -1, 0.00080568745437878484, 2, False, 0, 0)
+boolstatus = Part.Extension.SelectByRay(0.37008940271375373, 0.18646362408176231, -4499.8751583966487, 0, 0, -1, 0.00080568745437878484, 2, False, 0, 0)
+boolstatus = Part.Extension.SelectByRay(0.36558703164516643, 0.20234040627098968, -4500.1083876918001, 0, 0, -1, 0.00080568745437878484, 2, False, 0, 0)
+boolstatus = Part.Extension.SelectByID2("Чертежный вид14", "DRAWINGVIEW", 0.40397566917733202, 0.20162950560737364, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("Чертежный вид14", "DRAWINGVIEW", 0.38857282078479644, 0.21513661881313564, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SketchBoxSelect("1.020617", "0.711933", "0.000000", "0.812086", "0.422833", "0.000000")
+boolstatus = Part.Extension.SelectByID2("Чертежный вид14", "DRAWINGVIEW", 0.38715101939471624, 0.21418875121974884, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("Чертежный вид14", "DRAWINGVIEW", 0.37933111174927509, 0.20968638015116151, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("Чертежный вид14", "DRAWINGVIEW", 0.38999462217487668, 0.20779064496438787, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("Чертежный вид14", "DRAWINGVIEW", 0.39971026500709139, 0.20826457876108129, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("Чертежный вид14", "DRAWINGVIEW", 0.3930751918533838, 0.20565794287926759, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("Чертежный вид14", "DRAWINGVIEW", 0.38667708559802283, 0.21252998293132191, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("Чертежный вид14", "DRAWINGVIEW", 0.3824116814277822, 0.2120560491346285, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SketchBoxSelect("0.959005", "0.681127", "0.000000", "0.940048", "0.671649", "0.000000")
+boolstatus = Part.Extension.SelectByID2("Чертежный вид14", "DRAWINGVIEW", 0.38193774763108879, 0.20897547945612138, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("Чертежный вид14", "DRAWINGVIEW", 0.37933111174927509, 0.20779064496438787, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("Чертежный вид14", "DRAWINGVIEW", 0.3982884636170112, 0.21158211533793511, 0, False, 0, Nothing, 0)
+Part.ClearSelection2 True
+
+Dim pointArray As Variant
+Dim points() As Double
+ReDim points(0 To 20) As Double
+points(0) = 1.0632708085989866
+points(1) = 0.63847335425579665
+points(2) = 0
+points(3) = 0.84763093110348864
+points(4) = 0.5934496435699238
+points(5) = 0
+points(6) = 0.68886310921119831
+points(7) = 0.4820752013469744
+points(8) = 0
+points(9) = 0.80260722041761534
+points(10) = 0.23089028909947076
+points(11) = 0
+points(12) = 1.207820616590475
+points(13) = 0.43468182167763397
+points(14) = 0
+points(15) = 1.1391002160699313
+points(16) = 0.59107997458645667
+points(17) = 0
+points(18) = 1.0632708085989866
+points(19) = 0.63847335425579665
+points(20) = 0
+pointArray = points
+Dim skSegment As Object
+Set skSegment = Part.SketchManager.CreateSpline((pointArray))
+boolstatus = Part.ActivateView("Чертежный вид12")
+Part.ClearSelection2 True
+boolstatus = Part.ActivateSheet("Лист1")
+boolstatus = Part.ActivateView("Чертежный вид14")
+boolstatus = Part.Extension.SelectByID2("Spline1", "SKETCHSEGMENT", 0.40539747056741227, 0.19736410143713301, 0, False, 0, Nothing, 0)
+Dim myView As Object
+Set myView = Part.ActiveDrawingView
+longstatus = myView.Crop()
+
+' Zoom In/Out (MouseWheel)
+Dim swModelView As Object
+Set swModelView = Part.ActiveView
+swModelView.Scale2 = 1.5790105325133279
+Dim swTranslation() As Double
+ReDim swTranslation(0 To 2) As Double
+swTranslation(0) = -0.32044400748875468
+swTranslation(1) = -0.12560407252456007
+swTranslation(2) = 0
+Dim swTranslationVar As Variant
+swTranslationVar = swTranslation
+Dim swMathUtils As Object
+Set swMathUtils = swApp.GetMathUtility()
+Dim swTranslationVector As MathVector
+Set swTranslationVector = swMathUtils.CreateVector((swTranslationVar))
+swModelView.Translation3 = swTranslationVector
+
+' Zoom In/Out (MouseWheel)
+Set swModelView = Part.ActiveView
+swModelView.Scale2 = 1.7684917964149274
+ReDim swTranslation(0 To 2) As Double
+swTranslation(0) = -0.39714323889359227
+swTranslation(1) = -0.16193260734674245
+swTranslation(2) = 0
+swTranslationVar = swTranslation
+Set swMathUtils = swApp.GetMathUtility()
+Set swTranslationVector = swMathUtils.CreateVector((swTranslationVar))
+swModelView.Translation3 = swTranslationVector
+
+' Zoom In/Out (MouseWheel)
+Set swModelView = Part.ActiveView
+swModelView.Scale2 = 1.980710811984719
+ReDim swTranslation(0 To 2) As Double
+swTranslation(0) = -0.48304637806701028
+swTranslation(1) = -0.20262056634758666
+swTranslation(2) = 0
+swTranslationVar = swTranslation
+Set swMathUtils = swApp.GetMathUtility()
+Set swTranslationVector = swMathUtils.CreateVector((swTranslationVar))
+swModelView.Translation3 = swTranslationVector
+
+' Zoom In/Out (MouseWheel)
+Set swModelView = Part.ActiveView
+swModelView.Scale2 = 1.6505923433205991
+ReDim swTranslation(0 To 2) As Double
+swTranslation(0) = -0.36085698359727442
+swTranslation(1) = -0.14410047195632217
+swTranslation(2) = 0
+swTranslationVar = swTranslation
+Set swMathUtils = swApp.GetMathUtility()
+Set swTranslationVector = swMathUtils.CreateVector((swTranslationVar))
+swModelView.Translation3 = swTranslationVector
+
+' Zoom In/Out (MouseWheel)
+Set swModelView = Part.ActiveView
+swModelView.Scale2 = 1.3754936194338327
+ReDim swTranslation(0 To 2) As Double
+swTranslation(0) = -0.25903248820582769
+swTranslation(1) = -0.095333726630268484
+swTranslation(2) = 0
+swTranslationVar = swTranslation
+Set swMathUtils = swApp.GetMathUtility()
+Set swTranslationVector = swMathUtils.CreateVector((swTranslationVar))
+swModelView.Translation3 = swTranslationVector
+Part.ClearSelection2 True
+boolstatus = Part.ActivateSheet("Лист1")
+boolstatus = Part.ActivateView("Чертежный вид14")
+boolstatus = Part.Extension.SelectByRay(0.39418337534732983, 0.19463607423223722, -4499.9881992678256, 0, 0, -1, 0.00082580027895055809, 1, False, 0, 0)
+Part.ClearSelection2 True
+boolstatus = Part.ActivateSheet("Лист1")
+boolstatus = Part.ActivateView("Чертежный вид14")
+boolstatus = Part.Extension.SelectByID2("Чертежный вид14", "DRAWINGVIEW", 0.40487020248669003, 0.19317877965374772, 0, False, 0, Nothing, 0)
+Part.EditDelete
+Set myView = Part.CreateDrawViewFromModelView3("C:\Khach\mosavtosteklo\У-113 Леонардо-Проект\У-113_2\У-133_2 Сварная Часть.SLDASM", "*Изометрия", 0.29338312326464649, 0.17273721100752754, 0)
+boolstatus = Part.ActivateView("Чертежный вид20")
+Part.ClearSelection2 True
+boolstatus = Part.ActivateSheet("Лист1")
+boolstatus = Part.ActivateView("Чертежный вид20")
+boolstatus = Part.Extension.SelectByRay(0.33515397860734886, 0.15254817621888775, -4499.7589428751435, 0, 0, -1, 0.0016381181043672289, 1, False, 0, 0)
+boolstatus = Part.ActivateSheet("Лист1")
+boolstatus = Part.ActivateView("Чертежный вид20")
+boolstatus = Part.Extension.SelectByID2("Чертежный вид20", "DRAWINGVIEW", 0.27300185052988635, 0.23445408146867086, 0, False, 0, Nothing, 0)
+Part.ClearSelection2 True
+boolstatus = Part.ActivateSheet("Лист1")
+boolstatus = Part.ActivateView("Чертежный вид20")
+boolstatus = Part.Extension.SelectByID2("Чертежный вид20", "DRAWINGVIEW", 0.40468186437386633, 0.20555970443471847, 0, False, 0, Nothing, 0)
+Part.ClearSelection2 True
+boolstatus = Part.ActivateSheet("Лист1")
+boolstatus = Part.ActivateView("Чертежный вид20")
+boolstatus = Part.Extension.SelectByID2("Чертежный вид20", "DRAWINGVIEW", 0.26052134203884098, 0.22019753404012352, 0, False, 0, Nothing, 0)
+Part.ClearSelection2 True
+boolstatus = Part.ActivateSheet("Лист1")
+boolstatus = Part.ActivateView("Чертежный вид20")
+boolstatus = Part.Extension.SelectByRay(0.30192750615351005, 0.18958676455783516, -4500.7213447293907, 0, 0, -1, 0.0011432593632440702, 1, False, 0, 0)
+boolstatus = Part.ActivateSheet("Лист1")
+boolstatus = Part.ActivateView("Чертежный вид20")
+boolstatus = Part.Extension.SelectByID2("Чертежный вид20", "DRAWINGVIEW", 0.38128315607280433, 0.22052201794763246, 0, False, 0, Nothing, 0)
+Part.ClearSelection2 True
+boolstatus = Part.ActivateSheet("Лист1")
+
+' Zoom To Fit
+Part.ViewZoomtofit2
+
+' Zoom To Fit
+Part.ViewZoomtofit2
+
+' Zoom To Fit
+Part.ViewZoomtofit2
+
+' Save
+boolstatus = Part.Save3(1, swErrors, swWarnings)
+boolstatus = Part.Extension.SelectByID2("Лист1", "SHEET", 0.18269576568635928, 0.081677223003160757, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("Лист1", "SHEET", 0.18002494727687404, 0.078595509453754708, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("Лист1", "SHEET", 0.18209752372775762, 0.080354392707233005, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("Лист1", "SHEET", 0.18106867931904835, 0.079245979291700533, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SketchBoxSelect("3.621374", "1.584920", "0.000000", "3.567083", "1.511793", "0.000000")
+boolstatus = Part.Extension.SelectByID2("Лист1", "SHEET", 0.17181705357258126, 0.083954890599782575, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SketchBoxSelect("3.436341", "1.679098", "0.000000", "3.681204", "1.427587", "0.000000")
+
+' Save
+boolstatus = Part.Save3(1, swErrors, swWarnings)
+boolstatus = Part.ActivateView("Чертежный вид15")
+boolstatus = Part.Extension.SelectByID2("Детальный элемент66@Чертежный вид15", "CENTERLINE", 0.21228260472683963, 0.072270942137082891, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateSheet("Лист1")
+boolstatus = Part.Extension.SelectByID2("Лист1", "SHEET", 0.20012426372211128, 0.058889974662605329, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("Лист1", "SHEET", 0.14407306471999248, 0.036145535519580274, 0, False, 0, Nothing, 0)
+Part.ClearSelection2 True
+
+' Zoom To Fit
+Part.ViewZoomtofit2
+
+' Zoom To Fit
+Part.ViewZoomtofit2
+
+' Zoom To Fit
+Part.ViewZoomtofit2
+
+' Save
+boolstatus = Part.Save3(1, swErrors, swWarnings)
+boolstatus = Part.ActivateView("Чертежный вид15")
+boolstatus = Part.Extension.SelectByID2("Point6", "SKETCHPOINT", -0.98999999999999955, 0.010482467222588311, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateSheet("Лист1")
+boolstatus = Part.Extension.SelectByID2("Лист1", "SHEET", 0.18243387246437193, 0.07043555110070808, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("Лист1", "SHEET", 0.18129601234837314, 0.080297005439364272, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("Лист1", "SHEET", 0.18129601234837314, 0.080297005439364272, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("Лист1", "SHEET", 0.17731350194237738, 0.085038089256025906, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("Лист1", "SHEET", 0.18395101928570365, 0.10893315169200053, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("Лист1", "SHEET", 0.20196713778901787, 0.11860496267799026, 0, False, 0, Nothing, 0)
+Part.ClearSelection2 True
+
+' Zoom To Fit
+Part.ViewZoomtofit2
+
+' Zoom To Fit
+Part.ViewZoomtofit2
+
+' Zoom To Fit
+Part.ViewZoomtofit2
+
+' Save
+boolstatus = Part.Save3(1, swErrors, swWarnings)
+Part.ClearSelection2 True
+Part.ClearSelection2 True
+
+' Zoom To Fit
+Part.ViewZoomtofit2
+
+' Save
+boolstatus = Part.Save3(1, swErrors, swWarnings)
+
+' Save As
+longstatus = Part.SaveAs3("C:\Khach\mosavtosteklo\У-113 Леонардо-Проект\У-113_2\У-133_2 Сварная Часть.PDF", 0, 0)
+
+' Save
+boolstatus = Part.Save3(1, swErrors, swWarnings)
+boolstatus = Part.Extension.SelectByID2("Детальный элемент81@Лист1", "WELD", 0.016799732138012086, 0.016122743346072888, 0, False, 0, Nothing, 0)
+Part.EditDelete
+
+' Zoom To Fit
+Part.ViewZoomtofit2
+
+' Save As
+longstatus = Part.SaveAs3("C:\Khach\mosavtosteklo\У-113 Леонардо-Проект\У-113_2\У-133_2 Сварная Часть.PDF", 0, 0)
+
+' Zoom To Fit
+Part.ViewZoomtofit2
+
+' Zoom To Fit
+Part.ViewZoomtofit2
+
+' Save
+boolstatus = Part.Save3(1, swErrors, swWarnings)
+Set myModelView = Part.ActiveView
+myModelView.FrameState = swWindowState_e.swWindowMaximized
+Set myModelView = Part.ActiveView
+myModelView.FrameState = swWindowState_e.swWindowMaximized
+boolstatus = Part.ActivateView("Чертежный вид11")
+boolstatus = Part.Extension.SelectByRay(0.046412531898598682, 0.072840598518550403, -4499.1099999999997, 0, 0, -1, 0.00043421769076609984, 1, False, 0, 0)
+boolstatus = Part.Extension.SelectByRay(0.15254044396525426, 0.072712887433030962, -4499.1099999999997, 0, 0, -1, 0.00043421769076609984, 1, True, 0, 0)
+Dim myDisplayDim As Object
+Set myDisplayDim = Part.AddDimension2(0.099284921303647328, 0.05986926047623331, 0)
+Part.ClearSelection2 True
+boolstatus = Part.ActivateSheet("Лист1")
+
+' Zoom To Fit
+Part.ViewZoomtofit2
+
+' Zoom To Fit
+Part.ViewZoomtofit2
+
+' Zoom To Fit
+Part.ViewZoomtofit2
+
+' Save
+boolstatus = Part.Save3(1, swErrors, swWarnings)
+Part.ClearSelection2 True
+
+' Save
+boolstatus = Part.Save3(1, swErrors, swWarnings)
+Set myModelView = Part.ActiveView
+myModelView.FrameState = swWindowState_e.swWindowMaximized
+swApp.ExitApp
+End Sub
